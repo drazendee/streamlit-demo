@@ -1,4 +1,11 @@
+- step:
+    name: run-model
+    image: python:3.10
+    command:
+    - model.py
+
 - endpoint:
     name: streamlit-sample
     image: docker.io/drazend/streamlit 
-    server-command: printenv && streamlit 
+    server-command: printenv && streamlit run lit.py --server.headless=True
+    port: 8501
