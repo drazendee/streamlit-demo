@@ -34,5 +34,5 @@
 - endpoint:
     name: streamlit-sample
     image: docker.io/drazend/streamlit 
-    server-command: printenv && streamlit run lit.py --server.baseUrlPath valohai.cloud$VH_DEFAULT_PREFIX --browser.serverPort 80 --server.port 8501 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false
+    server-command: printenv && streamlit run lit.py --server.address valohai.cloud --server.baseUrlPath $VH_DEFAULT_PREFIX --browser.serverPort 80 --server.port 8501 --server.headless=true --server.enableCORS=false --server.enableXsrfProtection=false
     port: 8501
