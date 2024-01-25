@@ -14,6 +14,12 @@
         description: Customer Loyalty data
         path: data.csv
 
+- endpoint:
+    name: r-shiny
+    image: r-base:4.3.2
+    server-command: library(shiny) && runApp("r_demo")
+    port: 6205
+
 - pipeline:
     name: deploy
     nodes:
