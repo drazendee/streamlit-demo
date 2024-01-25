@@ -2,7 +2,17 @@
     name: run-model
     image: python:3.10
     command:
-    - model.py
+    - python model.py
+
+- endpoint:
+    name: loyalty-sample
+    image: tiangolo/uvicorn-gunicorn-fastapi:python3.7
+    server-command: uvicorn predict:app --host 0.0.0.0 --port 8000
+    port: 8501
+    files:
+      - name: data
+        description: Customer Loyalty data
+        path: data.csv
 
 - endpoint:
     name: streamlit-sample
