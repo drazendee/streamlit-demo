@@ -41,4 +41,4 @@
     name: streamlit-sample
     image: docker.io/drazend/streamlit 
     server-command: pip install watchdog && streamlit run lit.py --server.port=8501 --server.address=0.0.0.0
-    port: 8502
+    port: 8501
