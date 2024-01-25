@@ -1,0 +1,4 @@
+- endpoint:
+    name: streamlit-sample
+    image: docker.io/drazend/streamlit 
+    server-command: printenv && streamlit 
