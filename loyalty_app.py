@@ -3,7 +3,6 @@ from starlette.requests import Request
 import os
 import csv
 
-app = FastAPI()
 
 @app.middleware("http")
 async def process_valohai_prefix(request: Request, call_next):
@@ -22,6 +21,8 @@ async def process_valohai_prefix(request: Request, call_next):
             break
     return await call_next(request)
 
+app = FastAPI()
+
 data_path = 'data.csv'
 loaded_data = None
 
@@ -37,5 +38,7 @@ async def predict(customerid: str):
     for row in loaded_data:
         if row[0] == customerid:
             return {"category": row[1]}
+
     return {"category": "N/A"}
+
 
