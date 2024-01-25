@@ -17,8 +17,8 @@
 - endpoint:
     name: r-shiny
     image: drazend/rpython
-    server-command: R -e "library(shiny)" && R -e "shiny::runApp('r_demo')"
-    port: 6205
+    server-command: R -e "library(shiny)" && R -e "shiny::runApp('r_demo', host='0.0.0.0', port='6362')"
+    port: 6362
 
 - pipeline:
     name: deploy
