@@ -7,7 +7,7 @@
 - endpoint:
     name: loyalty-sample
     image: tiangolo/uvicorn-gunicorn-fastapi:python3.7
-    server-command: uvicorn predict:app --host 0.0.0.0 --port 8000
+    server-command: uvicorn loyalty_app:app --host 0.0.0.0 --port 8000
     port: 8501
     files:
       - name: data
