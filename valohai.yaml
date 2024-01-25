@@ -17,7 +17,7 @@
 - endpoint:
     name: r-shiny
     image: r-base:4.3.2
-    server-command: RUN R -e "install.packages('shiny')" && RUN R -e "runApp('r_demo')"
+    server-command: R -e "install.packages('shiny')" && R -e "runApp('r_demo')"
     port: 6205
 
 - pipeline:
