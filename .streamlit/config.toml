@@ -1,0 +1,9 @@
+[server]
+port=8502 
+headless=true
+enableCORS=false
+enableXsrfProtection=false
+enableWebsocketCompression=false
+
+[browser]
+serverPort = 8502
